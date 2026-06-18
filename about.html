@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About RIYA MOTORS — 18+ Years of Trusted Car Care in Siddhpur, Gujarat</title>
+  <meta name="description" content="Learn about RIYA MOTORS — Siddhpur's premier automobile workshop for over 18 years. Our story, our team, our values, business hours, and location." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="About RIYA MOTORS — 18+ Years of Trusted Car Care in Siddhpur" />
+  <meta property="og:description" content="Siddhpur's premier automobile workshop for over 18 years. Our story, our team, our values." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0b0c17;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    ul { list-style: none; }
+    input, textarea, select { font-family: inherit; outline: none; }
+
+    /* ===== CSS VARIABLES ===== */
+    :root {
+      --bg: #0b0c17;
+      --bg2: #0f101c;
+      --card: #12131f;
+      --card2: #1a1b2e;
+      --primary: #7c3aed;
+      --primary-light: rgba(124,58,237,0.15);
+      --primary-glow: rgba(124,58,237,0.4);
+      --text: #ffffff;
+      --muted: #8899bb;
+      --border: rgba(124,58,237,0.2);
+      --border2: rgba(255,255,255,0.06);
+      --yellow: #f59e0b;
+      --green: #25D366;
+      --radius: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 24px;
+    }
+
+    /* ===== UTILITIES ===== */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 96px 0; }
+    .section-dark { background: var(--card); }
+    .text-center { text-align: center; }
+    .text-primary { color: var(--primary); }
+    .gradient-text {
+      background: linear-gradient(135deg, #7c3aed, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 100px;
+      background: var(--primary-light);
+      border: 1px solid var(--border);
+      color: #a78bfa;
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+    .section-title {
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 800;
+      line-height: 1.15;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .section-subtitle {
+      font-size: 17px;
+      color: var(--muted);
+      margin-bottom: 60px;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-left {
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .fade-left.visible { opacity: 1; transform: translateX(0); }
+    .fade-right {
+      opacity: 0;
+      transform: translateX(30px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .fade-right.visible { opacity: 1; transform: translateX(0); }
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+
+    /* ===== NAVBAR ===== */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 999;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    #navbar.scrolled {
+      background: rgba(11,12,23,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 12px; }
+    .nav-logo-img {
+      width: 46px; height: 46px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      object-fit: cover;
+    }
+    .nav-logo-img-fallback {
+      width: 46px; height: 46px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--primary-light);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 18px; color: #a78bfa;
+      flex-shrink: 0;
+    }
+    .nav-brand-name { font-size: 20px; font-weight: 800; letter-spacing: 1px; color: #fff; }
+    .nav-brand-name span { color: var(--primary); }
+    .nav-brand-tag { font-size: 9px; letter-spacing: 3px; color: var(--muted); text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 13.5px; font-weight: 500; color: var(--muted); transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: #fff; }
+    .btn-call {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--primary); color: #fff;
+      padding: 10px 20px; border-radius: 100px;
+      font-size: 13.5px; font-weight: 600;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    .btn-call:hover { background: #6d28d9; box-shadow: 0 0 24px var(--primary-glow); }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; padding: 8px; cursor: pointer; }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; }
+    .mobile-menu {
+      display: none;
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a {
+      display: block; padding: 12px 0;
+      font-size: 15px; font-weight: 500; color: var(--muted);
+      border-bottom: 1px solid var(--border2);
+      transition: color 0.2s;
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover { color: #fff; }
+    .mobile-menu .mobile-call {
+      margin-top: 16px;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: var(--primary); color: #fff;
+      padding: 14px; border-radius: var(--radius);
+      font-size: 14px; font-weight: 600;
+    }
+
+    /* ===== PAGE HERO (ABOUT BANNER) ===== */
+    #page-hero {
+      padding: 160px 0 80px;
+      background: var(--bg);
+      position: relative;
+      overflow: hidden;
+    }
+    #page-hero::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 500px; height: 500px;
+      background: rgba(124,58,237,0.08);
+      border-radius: 50%;
+      filter: blur(80px);
+    }
+    #page-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: -100px;
+      width: 400px; height: 400px;
+      background: rgba(99,102,241,0.06);
+      border-radius: 50%;
+      filter: blur(60px);
+    }
+    .page-hero-dots {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at center, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .page-hero-inner { position: relative; z-index: 1; }
+    .breadcrumb {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px; color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .breadcrumb a { color: var(--primary); }
+    .breadcrumb a:hover { color: #a78bfa; }
+    .breadcrumb span { color: var(--muted); }
+    .page-hero-title {
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+    }
+    .page-hero-sub {
+      font-size: clamp(16px, 2vw, 20px);
+      color: var(--muted);
+      font-weight: 300;
+      max-width: 600px;
+    }
+
+    /* ===== OUR STORY ===== */
+    #story { padding: 96px 0; background: var(--card); }
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .story-title {
+      font-size: clamp(26px, 4vw, 44px);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+    .story-text {
+      font-size: 16px;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .story-quote {
+      background: var(--bg);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+    .story-quote p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.9);
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.7;
+    }
+    .story-img-wrap {
+      position: relative;
+    }
+    .story-img {
+      width: 100%;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      object-fit: cover;
+      aspect-ratio: 4/3;
+    }
+    .story-img-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+    .story-img-placeholder span {
+      font-size: 64px;
+    }
+    .story-img-placeholder p {
+      font-size: 14px;
+      color: var(--muted);
+      text-align: center;
+    }
+    .story-badge-wrap {
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      background: var(--primary);
+      border-radius: var(--radius-lg);
+      padding: 20px 24px;
+      box-shadow: 0 12px 40px var(--primary-glow);
+    }
+    .story-badge-num {
+      font-size: 36px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1;
+    }
+    .story-badge-lbl {
+      font-size: 12px;
+      color: rgba(255,255,255,0.7);
+      font-weight: 500;
+    }
+
+    /* ===== MISSION & VALUES ===== */
+    #values { padding: 96px 0; background: var(--bg); }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 56px;
+    }
+    .value-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .value-card:hover {
+      border-color: rgba(124,58,237,0.5);
+      transform: translateY(-4px);
+    }
+    .value-emoji {
+      font-size: 40px;
+      margin-bottom: 18px;
+    }
+    .value-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .value-desc {
+      font-size: 14.5px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ===== TIMELINE ===== */
+    #timeline { padding: 96px 0; background: var(--card); }
+    .timeline-list { max-width: 700px; margin: 0 auto; position: relative; }
+    .timeline-list::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--primary), rgba(124,58,237,0.1));
+    }
+    .timeline-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 28px;
+      margin-bottom: 40px;
+      padding-left: 56px;
+      position: relative;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: 9px;
+      top: 6px;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 3px solid var(--card);
+      box-shadow: 0 0 0 2px var(--primary);
+      flex-shrink: 0;
+    }
+    .timeline-year {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--primary);
+      min-width: 70px;
+      line-height: 1.3;
+    }
+    .timeline-content h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .timeline-content p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* ===== TEAM ===== */
+    #team { padding: 96px 0; background: var(--bg); }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .team-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 20px;
+      text-align: center;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .team-card:hover {
+      border-color: rgba(124,58,237,0.5);
+      transform: translateY(-4px);
+    }
+    .team-avatar {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: rgba(124,58,237,0.2);
+      border: 2px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px;
+      font-weight: 900;
+      color: #a78bfa;
+      margin: 0 auto 16px;
+    }
+    .team-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .team-role {
+      font-size: 13px;
+      color: var(--primary);
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .team-exp {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ===== BUSINESS HOURS ===== */
+    #hours { padding: 96px 0; background: var(--card); }
+    .hours-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .hours-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+    }
+    .hours-card-header {
+      background: linear-gradient(135deg, var(--primary), #4f46e5);
+      padding: 28px 32px;
+    }
+    .hours-card-header h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .hours-card-header p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+    }
+    .hours-list { padding: 24px 32px; }
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border2);
+    }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-day {
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+    }
+    .hours-time {
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+    .hours-open {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      border-radius: 100px;
+      background: rgba(34,197,94,0.12);
+      border: 1px solid rgba(34,197,94,0.25);
+      color: #4ade80;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .hours-open::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #4ade80;
+    }
+    .hours-emergency {
+      display: inline-flex;
+      padding: 3px 10px;
+      border-radius: 100px;
+      background: rgba(245,158,11,0.1);
+      border: 1px solid rgba(245,158,11,0.25);
+      color: var(--yellow);
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .hours-closed {
+      display: inline-flex;
+      padding: 3px 10px;
+      border-radius: 100px;
+      background: rgba(239,68,68,0.1);
+      border: 1px solid rgba(239,68,68,0.2);
+      color: #f87171;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    /* Info panel alongside hours */
+    .hours-info { display: flex; flex-direction: column; gap: 20px; }
+    .hours-info-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .hours-info-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+    .hours-info-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .hours-info-text {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .hours-info-text a {
+      color: var(--primary);
+      transition: color 0.2s;
+    }
+    .hours-info-text a:hover { color: #a78bfa; }
+
+    /* ===== CONTACT SECTION ===== */
+    #contact-about { padding: 96px 0; background: var(--bg); }
+    .contact-full-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .contact-icon {
+      width: 48px; height: 48px;
+      border-radius: var(--radius);
+      background: var(--card);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .contact-detail h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .contact-detail p, .contact-detail a {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+      display: block;
+      transition: color 0.2s;
+    }
+    .contact-detail a:hover { color: var(--primary); }
+    .contact-action-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 32px;
+    }
+    .action-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px;
+      border-radius: var(--radius);
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.2s;
+      text-align: center;
+    }
+    .action-btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+    .action-btn-primary:hover { background: #6d28d9; box-shadow: 0 8px 24px var(--primary-glow); }
+    .action-btn-wa {
+      background: rgba(37,211,102,0.1);
+      color: var(--green);
+      border: 1px solid rgba(37,211,102,0.25);
+    }
+    .action-btn-wa:hover { background: rgba(37,211,102,0.18); }
+    .action-btn-map {
+      background: var(--card);
+      color: #fff;
+      border: 1px solid var(--border);
+      grid-column: span 2;
+    }
+    .action-btn-map:hover { background: var(--card2); }
+    /* Contact form on about page */
+    .about-form-panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 36px;
+    }
+    .about-form-panel h3 {
+      font-size: 21px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .about-form-panel p {
+      font-size: 13.5px;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .aform-group { margin-bottom: 18px; }
+    .aform-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 6px;
+    }
+    .aform-group input,
+    .aform-group textarea,
+    .aform-group select {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      font-size: 14px;
+      color: #fff;
+      transition: border-color 0.2s;
+    }
+    .aform-group textarea { resize: none; height: 96px; }
+    .aform-group select { appearance: none; }
+    .aform-group input:focus,
+    .aform-group textarea:focus,
+    .aform-group select:focus { border-color: var(--primary); }
+    .aform-group input::placeholder,
+    .aform-group textarea::placeholder { color: var(--muted); }
+    .aform-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .btn-aform {
+      width: 100%;
+      height: 50px;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, #7c3aed, #4f46e5);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 8px 24px rgba(124,58,237,0.25);
+      margin-top: 8px;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .btn-aform:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(124,58,237,0.4); }
+    .aform-note {
+      text-align: center;
+      font-size: 11.5px;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    /* ===== MAP ===== */
+    #map-about {
+      height: 440px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      filter: grayscale(0.4) contrast(1.1);
+      opacity: 0.88;
+      transition: all 0.6s;
+    }
+    #map-about:hover { filter: none; opacity: 1; }
+    #map-about iframe { width: 100%; height: 100%; border: none; display: block; }
+
+    /* ===== STATS ===== */
+    #about-stats {
+      padding: 72px 0;
+      background: rgba(124,58,237,0.04);
+      border-top: 1px solid rgba(124,58,237,0.1);
+      border-bottom: 1px solid rgba(124,58,237,0.1);
+      position: relative;
+    }
+    #about-stats::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(124,58,237,0.12) 1px, transparent 1px);
+      background-size: 24px 24px;
+      opacity: 0.4;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .stat-num {
+      font-size: clamp(40px, 6vw, 64px);
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -1px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-star { color: var(--yellow); font-size: 0.55em; margin-left: 4px; vertical-align: middle; }
+    .stat-lbl {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+
+    /* ===== FOOTER ===== */
+    #footer {
+      background: var(--card);
+      border-top: 1px solid var(--border);
+      padding: 64px 0 32px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+    .footer-logo-img {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      object-fit: cover;
+    }
+    .footer-logo-img-fallback {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--primary-light);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 16px; color: #a78bfa;
+      flex-shrink: 0;
+    }
+    .footer-brand-name { font-size: 19px; font-weight: 800; letter-spacing: 1px; color: #fff; }
+    .footer-brand-name span { color: var(--primary); }
+    .footer-brand-tag { font-size: 9px; letter-spacing: 3px; color: var(--muted); text-transform: uppercase; }
+    .footer-desc { font-size: 13.5px; color: var(--muted); line-height: 1.75; }
+    .footer-col h4 {
+      font-size: 11px; font-weight: 700; letter-spacing: 2.5px;
+      text-transform: uppercase; color: #fff; margin-bottom: 20px;
+    }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a,
+    .footer-col ul li span { font-size: 13.5px; color: var(--muted); transition: color 0.2s; }
+    .footer-col ul li a:hover { color: var(--primary); }
+    .footer-contact-item {
+      display: flex; align-items: flex-start; gap: 10px; margin-bottom: 14px;
+    }
+    .footer-contact-icon { color: var(--primary); font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+    .footer-contact-item span,
+    .footer-contact-item a {
+      font-size: 13px; color: var(--muted); line-height: 1.6; display: block; transition: color 0.2s;
+    }
+    .footer-contact-item a:hover { color: var(--primary); }
+    .footer-bottom {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 24px; border-top: 1px solid var(--border2);
+      flex-wrap: wrap; gap: 12px;
+    }
+    .footer-bottom p { font-size: 13px; color: var(--muted); }
+    .footer-bottom span { font-size: 12px; color: rgba(136,153,187,0.4); }
+
+    /* ===== FLOATING BUTTONS ===== */
+    .floating-btns {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      z-index: 999;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .float-wa {
+      width: 58px; height: 58px;
+      border-radius: 50%;
+      background: var(--green);
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 8px 24px rgba(37,211,102,0.4);
+      transition: transform 0.2s;
+      position: relative;
+    }
+    .float-wa:hover { transform: scale(1.1); }
+    .float-wa::before {
+      content: '';
+      position: absolute; inset: 0;
+      border-radius: 50%;
+      background: var(--green);
+      animation: floatPing 2s ease-in-out infinite;
+    }
+    @keyframes floatPing {
+      0%,100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.5); opacity: 0; }
+    }
+    .float-wa svg { position: relative; z-index: 1; }
+    .float-wa-tooltip {
+      position: absolute;
+      right: calc(100% + 14px);
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--card);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 7px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+    }
+    .float-wa:hover .float-wa-tooltip { opacity: 1; }
+    .float-phone {
+      width: 58px; height: 58px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      box-shadow: 0 8px 24px var(--primary-glow);
+      transition: transform 0.2s;
+    }
+    .float-phone:hover { transform: scale(1.1); }
+
+    /* ===== SCROLLBAR ===== */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .story-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hours-grid { grid-template-columns: 1fr; }
+      .contact-full-grid { grid-template-columns: 1fr; gap: 40px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .section { padding: 64px 0; }
+      .container { padding: 0 16px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .values-grid { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr 1fr; }
+      .contact-action-grid { grid-template-columns: 1fr; }
+      .action-btn-map { grid-column: span 1; }
+      .aform-row { grid-template-columns: 1fr; }
+      .page-hero-title { font-size: 34px; }
+      .story-badge-wrap { position: static; display: inline-flex; gap: 12px; flex-direction: column; margin-top: 20px; }
+      .about-form-panel { padding: 24px; }
+    }
+    @media (max-width: 480px) {
+      .team-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="./images/logo.png" alt="RIYA MOTORS Logo" class="nav-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+        <div class="nav-logo-img-fallback" style="display:none;">R</div>
+        <div>
+          <div class="nav-brand-name">RIYA<span>MOTORS</span></div>
+          <div class="nav-brand-tag">Car Care Center</div>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#whyus">Why Us</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#testimonials">Testimonials</a>
+        <a href="index.html#book">Book</a>
+        <a href="about.html" class="active" style="color:#fff;">About</a>
+        <a href="tel:+919428665133" class="btn-call">
+          📞 Call Now
+        </a>
+      </div>
+      <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#whyus">Why Us</a>
+    <a href="index.html#gallery">Gallery</a>
+    <a href="index.html#testimonials">Testimonials</a>
+    <a href="index.html#book">Book Appointment</a>
+    <a href="about.html" style="color:#fff;">About Us</a>
+    <a href="tel:+919428665133" class="mobile-call">
+      📞 Call Now — +91 94286 65133
+    </a>
+  </div>
+</nav>
+
+<!-- ===== PAGE HERO ===== -->
+<section id="page-hero">
+  <div class="page-hero-dots"></div>
+  <div class="container page-hero-inner">
+    <div class="breadcrumb fade-in">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>About Us</span>
+    </div>
+    <div class="badge fade-in">Our Story</div>
+    <h1 class="page-hero-title fade-in">
+      About <span class="gradient-text">RIYA MOTORS</span>
+    </h1>
+    <p class="page-hero-sub fade-in">
+      18+ years of building trust, one vehicle at a time. Siddhpur's most reliable multi-brand automobile workshop, car care center, and genuine spare parts supplier.
+    </p>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section id="about-stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="fade-in">
+        <div class="stat-num" data-target="18" data-suffix="+">0+</div>
+        <div class="stat-lbl">Years Experience</div>
+      </div>
+      <div class="fade-in delay-1">
+        <div class="stat-num" style="display:flex;align-items:baseline;justify-content:center;gap:4px;">
+          4.7<span class="stat-star">★</span>
+        </div>
+        <div class="stat-lbl">Customer Rating</div>
+      </div>
+      <div class="fade-in delay-2">
+        <div class="stat-num" data-target="1000" data-suffix="+">0+</div>
+        <div class="stat-lbl">Vehicles Serviced</div>
+      </div>
+      <div class="fade-in delay-3">
+        <div class="stat-num" data-target="4" data-suffix="">0</div>
+        <div class="stat-lbl">Expert Mechanics</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OUR STORY ===== -->
+<section id="story" class="section-dark">
+  <div class="container">
+    <div class="story-grid">
+      <div class="fade-left">
+        <div class="badge">Our Story</div>
+        <h2 class="story-title">A Legacy Built on <span class="text-primary">Trust</span> &amp; Transparency</h2>
+        <p class="story-text">
+          RIYA MOTORS was founded over 18 years ago with a single vision: to provide the people of Siddhpur with honest, professional, and affordable automobile care — the kind of service you'd give your own family.
+        </p>
+        <p class="story-text">
+          What started as a modest workshop has grown into Siddhpur's premier multi-brand car care center. Today, we are equipped with modern hydraulic lifts, advanced diagnostic tools, and a team of skilled mechanics who take pride in their craft.
+        </p>
+        <div class="story-quote">
+          <p>"We believe that every customer deserves to understand exactly what is being done to their vehicle and why. Transparency is not just a policy for us — it is a promise."</p>
+        </div>
+        <p class="story-text">
+          From routine servicing to complex engine overhauls, from genuine spare parts to emergency breakdowns — RIYA MOTORS is the complete solution trusted by thousands of vehicle owners across Siddhpur and the surrounding region.
+        </p>
+      </div>
+      <div class="fade-right">
+        <div class="story-img-wrap">
+          <img src="./images/workshop-building.jpg" alt="RIYA MOTORS Workshop" class="story-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="story-img-placeholder" style="display:none;">
+            <span>🏢</span>
+            <p>RIYA MOTORS Workshop<br />Siddhpur, Gujarat</p>
+          </div>
+          <div class="story-badge-wrap">
+            <div class="story-badge-num">18+</div>
+            <div class="story-badge-lbl">Years of Trust</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MISSION & VALUES ===== -->
+<section id="values">
+  <div class="container">
+    <div class="text-center fade-in">
+      <div class="badge">Our Core Values</div>
+      <h2 class="section-title">What We Stand For</h2>
+      <p class="section-subtitle">Every decision we make is guided by these principles. They are the foundation of why thousands of vehicle owners trust us with their most prized possessions.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card fade-in">
+        <div class="value-emoji">🤝</div>
+        <div class="value-title">Absolute Transparency</div>
+        <div class="value-desc">We explain every repair, every part, every cost — before we begin. No surprises on your bill. No unnecessary work. What we quote is what you pay.</div>
+      </div>
+      <div class="value-card fade-in delay-1">
+        <div class="value-emoji">🔬</div>
+        <div class="value-title">Technical Excellence</div>
+        <div class="value-desc">Our mechanics undergo continuous training to stay current with the latest automotive technologies, diagnostic methods, and repair techniques across all major brands.</div>
+      </div>
+      <div class="value-card fade-in delay-2">
+        <div class="value-emoji">🛡️</div>
+        <div class="value-title">Genuine Parts Only</div>
+        <div class="value-desc">We use only genuine, OEM-quality spare parts. We believe your vehicle deserves the same components the manufacturer intended — and so do you.</div>
+      </div>
+      <div class="value-card fade-in">
+        <div class="value-emoji">⚡</div>
+        <div class="value-title">Quick Turnaround</div>
+        <div class="value-desc">We respect your time. Our efficient processes, modern equipment, and experienced team ensure your vehicle is returned to you as quickly as possible without cutting corners.</div>
+      </div>
+      <div class="value-card fade-in delay-1">
+        <div class="value-emoji">💚</div>
+        <div class="value-title">Customer First, Always</div>
+        <div class="value-desc">Every policy we have — free inspection, pickup &amp; drop, post-service follow-up — exists because of one reason: your satisfaction and peace of mind come before everything else.</div>
+      </div>
+      <div class="value-card fade-in delay-2">
+        <div class="value-emoji">🌟</div>
+        <div class="value-title">Community Commitment</div>
+        <div class="value-desc">We are proud members of the Siddhpur community. We give back through fair pricing, honest service, and emergency assistance to ensure every vehicle owner on our roads stays safe.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TIMELINE ===== -->
+<section id="timeline" class="section-dark">
+  <div class="container">
+    <div class="text-center fade-in" style="margin-bottom:56px;">
+      <div class="badge">Our Journey</div>
+      <h2 class="section-title">Growing With Siddhpur</h2>
+      <p class="section-subtitle">From a small workshop to Siddhpur's most trusted car care center — our journey has been driven by passion and your trust.</p>
+    </div>
+    <div class="timeline-list">
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2006</div>
+        <div class="timeline-content">
+          <h4>The Beginning</h4>
+          <p>RIYA MOTORS opened its doors in Siddhpur with a small team, big ambitions, and an unwavering commitment to honest automobile service.</p>
+        </div>
+      </div>
+      <div class="timeline-item fade-in delay-1">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2010</div>
+        <div class="timeline-content">
+          <h4>Expanding Services</h4>
+          <p>Added comprehensive AC service &amp; repair capabilities, cooling system specialists, and a dedicated spare parts inventory for fast turnaround.</p>
+        </div>
+      </div>
+      <div class="timeline-item fade-in delay-2">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2015</div>
+        <div class="timeline-content">
+          <h4>Multi-Brand Expertise</h4>
+          <p>Expanded our technical capabilities to service all major automobile brands — from Maruti Suzuki and Hyundai to Toyota, Mahindra, Tata, and more.</p>
+        </div>
+      </div>
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2018</div>
+        <div class="timeline-content">
+          <h4>Hydraulic Lift Facility</h4>
+          <p>Installed our professional hydraulic lift system — a major upgrade enabling precise underbody inspections, safer repairs, and more accurate diagnostics.</p>
+        </div>
+      </div>
+      <div class="timeline-item fade-in delay-1">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2022</div>
+        <div class="timeline-content">
+          <h4>1000+ Vehicles Milestone</h4>
+          <p>Proudly crossed 1000+ vehicles serviced, a testament to the trust our community has placed in us over the years. We introduced pickup &amp; drop service.</p>
+        </div>
+      </div>
+      <div class="timeline-item fade-in delay-2">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">Today</div>
+        <div class="timeline-content">
+          <h4>Siddhpur's #1 Car Care Center</h4>
+          <p>With a 4.7-star rating, 4 expert mechanics, and over 18 years of trust — RIYA MOTORS continues to serve Siddhpur with the same passion and integrity we started with.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEAM ===== -->
+<section id="team">
+  <div class="container">
+    <div class="text-center fade-in" style="margin-bottom:48px;">
+      <div class="badge">Our Team</div>
+      <h2 class="section-title">The Experts Behind <span class="text-primary">RIYA MOTORS</span></h2>
+      <p class="section-subtitle">Our mechanics are not just technicians — they are craftsmen who take personal pride in every vehicle they service.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card fade-in">
+        <div class="team-avatar">R</div>
+        <div class="team-name">Riya Motors Lead</div>
+        <div class="team-role">Master Mechanic &amp; Founder</div>
+        <div class="team-exp">18+ Years Experience</div>
+      </div>
+      <div class="team-card fade-in delay-1">
+        <div class="team-avatar">M</div>
+        <div class="team-name">Engine Specialist</div>
+        <div class="team-role">Engine &amp; Transmission Expert</div>
+        <div class="team-exp">12+ Years Experience</div>
+      </div>
+      <div class="team-card fade-in delay-2">
+        <div class="team-avatar">A</div>
+        <div class="team-name">AC &amp; Electrical</div>
+        <div class="team-role">Climate &amp; Systems Technician</div>
+        <div class="team-exp">8+ Years Experience</div>
+      </div>
+      <div class="team-card fade-in delay-3">
+        <div class="team-avatar">S</div>
+        <div class="team-name">Suspension Expert</div>
+        <div class="team-role">Brake &amp; Suspension Specialist</div>
+        <div class="team-exp">10+ Years Experience</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BUSINESS HOURS ===== -->
+<section id="hours" class="section-dark">
+  <div class="container">
+    <div class="text-center fade-in" style="margin-bottom:48px;">
+      <div class="badge">Visit Us</div>
+      <h2 class="section-title">Business Hours &amp; Location</h2>
+      <p class="section-subtitle">We're open 6 days a week to serve you. Emergency breakdown assistance is available even on Sundays.</p>
+    </div>
+    <div class="hours-grid">
+      <div class="fade-left">
+        <div class="hours-card">
+          <div class="hours-card-header">
+            <h3>🕐 Opening Hours</h3>
+            <p>We're here when you need us most</p>
+          </div>
+          <div class="hours-list">
+            <div class="hours-row">
+              <span class="hours-day">Monday</span>
+              <div style="display:flex;align-items:center;gap:10px;">
+                <span class="hours-time">8:00 AM – 8:30 PM</span>
+                <span class="hours-open">Open</span>
+              </div>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Tuesday</span>
+              <div style="display:flex;align-items:center;gap:10px;">
+                <span class="hours-time">8:00 AM – 8:30 PM</span>
+                <span class="hours-open">Open</span>
+              </div>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Wednesday</span>
+              <div style="display:flex;align-items:center;gap:10px;">
+                <span class="hours-time">8:00 AM – 8:30 PM</span>
+                <span class="hours-open">Open</span>
+              </div>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Thursday</span>
+              <div style="display:flex;align-items:center;gap:10px;">
+                <span class="hours-time">8:00 AM – 8:30 PM</span>
+                <span class="hours-open">Open</span>
+              </div>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Friday</span>
+              <div style="display:flex;align-items:center;gap:10px;">
+                <span class="hours-time">8:00 AM – 8:30 PM</span>
+                <span class="hours-open">Open</span>
+              </div>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Saturday</span>
+              <div style="display:flex;align-items:center;gap:10px;">
+                <span class="hours-time">8:00 AM – 8:30 PM</span>
+                <span class="hours-open">Open</span>
+              </div>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Sunday</span>
+              <div style="display:flex;align-items:center;gap:10px;">
+                <span class="hours-time">Emergency Only</span>
+                <span class="hours-emergency">Emergency</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hours-info fade-right">
+        <div class="hours-info-card">
+          <div class="hours-info-icon">📍</div>
+          <div>
+            <div class="hours-info-title">Workshop Address</div>
+            <div class="hours-info-text">
+              Gokuldham, Near Tirupati Plaza,<br />
+              6, Highway Road, Saraswati Nagar,<br />
+              Siddhpur, Gujarat 384151<br /><br />
+              <a href="https://maps.app.goo.gl/XVWhZWnAHRj9BP7F6" target="_blank" rel="noopener noreferrer">📍 Get Directions on Google Maps →</a>
+            </div>
+          </div>
+        </div>
+        <div class="hours-info-card">
+          <div class="hours-info-icon">📞</div>
+          <div>
+            <div class="hours-info-title">Phone Numbers</div>
+            <div class="hours-info-text">
+              <a href="tel:+919724458151">+91 97244 58151</a><br />
+              <a href="tel:+919428665133">+91 94286 65133</a><br />
+              <a href="tel:+919427516594">+91 94275 16594</a>
+            </div>
+          </div>
+        </div>
+        <div class="hours-info-card">
+          <div class="hours-info-icon">💬</div>
+          <div>
+            <div class="hours-info-title">WhatsApp Booking</div>
+            <div class="hours-info-text">
+              Send us a message any time. We respond within 15 minutes during business hours.<br /><br />
+              <a href="https://wa.me/919427516594" target="_blank" rel="noopener noreferrer">Chat with us on WhatsApp →</a>
+            </div>
+          </div>
+        </div>
+        <div class="hours-info-card">
+          <div class="hours-info-icon">🚗</div>
+          <div>
+            <div class="hours-info-title">Pickup &amp; Drop Service</div>
+            <div class="hours-info-text">
+              Too busy to bring your car in? We offer convenient pickup and drop-off service within Siddhpur. Call us to arrange.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact-about">
+  <div class="container">
+    <div class="contact-full-grid">
+      <div class="fade-left">
+        <div class="badge">Contact Us</div>
+        <h2 class="section-title">Get In Touch With <span class="text-primary">RIYA MOTORS</span></h2>
+        <p style="font-size:16px;color:var(--muted);margin-bottom:36px;line-height:1.75;">
+          Whether you need to book a service, ask about a spare part, or just have a question about your vehicle — our team is always ready to help.
+        </p>
+        <div class="contact-detail">
+          <div class="contact-icon">📍</div>
+          <div>
+            <h4>Workshop Location</h4>
+            <p>Gokuldham Near Tirupati Plaza, 6, Highway Road,<br />Saraswati Nagar, Siddhpur, Gujarat 384151</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">📞</div>
+          <div>
+            <h4>Call Us</h4>
+            <a href="tel:+919724458151">+91 97244 58151</a>
+            <a href="tel:+919428665133">+91 94286 65133</a>
+            <a href="tel:+919427516594">+91 94275 16594</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <h4>Business Hours</h4>
+            <p>Monday – Saturday: 8:00 AM – 8:30 PM</p>
+            <p style="font-size:13px;color:rgba(136,153,187,0.6);margin-top:4px;">Sunday: Closed (Emergency breakdown only)</p>
+          </div>
+        </div>
+        <div class="contact-action-grid">
+          <a href="tel:+919428665133" class="action-btn action-btn-primary">📞 Call Now</a>
+          <a href="https://wa.me/919427516594" target="_blank" rel="noopener noreferrer" class="action-btn action-btn-wa">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Us
+          </a>
+          <a href="https://maps.app.goo.gl/XVWhZWnAHRj9BP7F6" target="_blank" rel="noopener noreferrer" class="action-btn action-btn-map">
+            📍 Get Directions on Google Maps
+          </a>
+        </div>
+      </div>
+      <div class="fade-right">
+        <div class="about-form-panel">
+          <h3>Send Us a Message</h3>
+          <p>Fill in the form and we'll reply on WhatsApp within 15 minutes during business hours.</p>
+          <form id="aboutContactForm" onsubmit="submitAboutContact(event)" novalidate>
+            <div class="aform-row">
+              <div class="aform-group">
+                <label>Full Name *</label>
+                <input type="text" id="ac-name" placeholder="Your name" required />
+              </div>
+              <div class="aform-group">
+                <label>Mobile Number *</label>
+                <input type="tel" id="ac-phone" placeholder="+91 00000 00000" required />
+              </div>
+            </div>
+            <div class="aform-group">
+              <label>Vehicle</label>
+              <input type="text" id="ac-vehicle" placeholder="e.g. Hyundai Creta, Maruti Swift" />
+            </div>
+            <div class="aform-group">
+              <label>Service Required</label>
+              <input type="text" id="ac-service" placeholder="e.g. Full Service, AC Repair, Spare Parts" />
+            </div>
+            <div class="aform-group">
+              <label>Your Message / Query</label>
+              <textarea id="ac-message" placeholder="Tell us more about what you need or any questions you have..."></textarea>
+            </div>
+            <button type="submit" class="btn-aform">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Send via WhatsApp
+            </button>
+            <div class="aform-note">We reply within 15 minutes during business hours (Mon–Sat, 8 AM–8:30 PM)</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MAP ===== -->
+<div id="map-about">
+  <iframe
+    src="https://maps.google.com/maps?q=Riya+Motors+Siddhpur+Gujarat&output=embed"
+    allowfullscreen
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="RIYA MOTORS Location"
+  ></iframe>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <img src="./images/logo.png" alt="RIYA MOTORS" class="footer-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="footer-logo-img-fallback" style="display:none;">R</div>
+          <div>
+            <div class="footer-brand-name">RIYA<span>MOTORS</span></div>
+            <div class="footer-brand-tag">Car Care Center</div>
+          </div>
+        </div>
+        <p class="footer-desc">Siddhpur's most trusted complete car care center for over 18 years. Premium service, genuine parts, and expert mechanics under one roof.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#whyus">Why Choose Us</a></li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Popular Services</h4>
+        <ul>
+          <li><span>Complete Car Servicing</span></li>
+          <li><span>Engine Overhaul &amp; Repair</span></li>
+          <li><span>AC Service &amp; Gas Refill</span></li>
+          <li><span>Computer Diagnostics</span></li>
+          <li><span>Brake &amp; Suspension Work</span></li>
+          <li><span>Genuine Spare Parts</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📍</span>
+          <span>Gokuldham Near Tirupati Plaza, 6, Highway Road, Saraswati Nagar, Siddhpur, Gujarat 384151</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📞</span>
+          <div>
+            <a href="tel:+919724458151">+91 97244 58151</a>
+            <a href="tel:+919428665133">+91 94286 65133</a>
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">🕐</span>
+          <span>Mon–Sat: 8:00 AM – 8:30 PM</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p id="footer-year">© 2025 RIYA MOTORS. All rights reserved.</p>
+      <span>Premium Automotive Workshop in Siddhpur</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== FLOATING BUTTONS ===== -->
+<div class="floating-btns">
+  <a href="https://wa.me/919427516594" target="_blank" rel="noopener noreferrer" class="float-wa" aria-label="Chat on WhatsApp">
+    <div class="float-wa-tooltip">Chat on WhatsApp</div>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <a href="tel:+919428665133" class="float-phone" id="floatPhone" style="display:none;" aria-label="Call Now">
+    📞
+  </a>
+</div>
+
+<script>
+  /* ===== NAVBAR ===== */
+  var navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', function () {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+  });
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  /* ===== MOBILE PHONE FLOAT ===== */
+  function checkMobile() {
+    var p = document.getElementById('floatPhone');
+    if (window.innerWidth <= 768) {
+      p.style.display = 'flex';
+      p.style.alignItems = 'center';
+      p.style.justifyContent = 'center';
+    } else {
+      p.style.display = 'none';
+    }
+  }
+  checkMobile();
+  window.addEventListener('resize', checkMobile);
+
+  /* ===== SCROLL ANIMATIONS ===== */
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in, .fade-left, .fade-right').forEach(function (el) {
+    observer.observe(el);
+  });
+
+  /* ===== FOOTER YEAR ===== */
+  document.getElementById('footer-year').textContent =
+    '© ' + new Date().getFullYear() + ' RIYA MOTORS. All rights reserved.';
+
+  /* ===== COUNTER ANIMATION ===== */
+  var counterObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var el = entry.target;
+        var target = parseInt(el.getAttribute('data-target'));
+        var suffix = el.getAttribute('data-suffix') || '';
+        var step = target / (1800 / 16);
+        var current = 0;
+        var timer = setInterval(function () {
+          current = Math.min(current + step, target);
+          el.textContent = Math.floor(current) + suffix;
+          if (current >= target) clearInterval(timer);
+        }, 16);
+        counterObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('[data-target]').forEach(function (c) {
+    counterObserver.observe(c);
+  });
+
+  /* ===== CONTACT FORM ===== */
+  function submitAboutContact(e) {
+    e.preventDefault();
+    var name = document.getElementById('ac-name').value.trim();
+    var phone = document.getElementById('ac-phone').value.trim();
+    var vehicle = document.getElementById('ac-vehicle').value.trim();
+    var service = document.getElementById('ac-service').value.trim();
+    var message = document.getElementById('ac-message').value.trim();
+    if (!name || !phone) {
+      alert('Please enter your name and phone number to continue.');
+      return;
+    }
+    var text = 'Inquiry from RIYA MOTORS Website (About Page):%0A' +
+      '*Name:* ' + encodeURIComponent(name) + '%0A' +
+      '*Phone:* ' + encodeURIComponent(phone) + '%0A' +
+      '*Vehicle:* ' + encodeURIComponent(vehicle || 'Not specified') + '%0A' +
+      '*Service:* ' + encodeURIComponent(service || 'Not specified') + '%0A' +
+      '*Message:* ' + encodeURIComponent(message || 'N/A');
+    window.open('https://wa.me/919427516594?text=' + text, '_blank');
+    document.getElementById('aboutContactForm').reset();
+  }
+
+  /* ===== SEO STRUCTURED DATA ===== */
+  var sd = document.createElement('script');
+  sd.type = 'application/ld+json';
+  sd.textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "RIYA MOTORS",
+    "telephone": "+919724458151",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Gokuldham Near Tirupati Plaza, 6, Highway Road, Saraswati Nagar",
+      "addressLocality": "Siddhpur",
+      "addressRegion": "Gujarat",
+      "postalCode": "384151",
+      "addressCountry": "IN"
+    },
+    "description": "Siddhpur's most trusted automobile workshop for 18+ years.",
+    "foundingDate": "2006"
+  });
+  document.head.appendChild(sd);
+</script>
+</body>
+</html>
